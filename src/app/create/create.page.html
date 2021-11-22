@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ionic 5 SQLite Storage asdads</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Create -->
+  <ion-item>
+    <ion-label position="floating">title</ion-label>
+    <ion-input [(ngModel)]="title"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">about</ion-label>
+    <ion-input [(ngModel)]="about"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">address</ion-label>
+    <ion-input [(ngModel)]="address"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">num_bed_room</ion-label>
+    <ion-input [(ngModel)]="num_bed_room"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">num_kitchen</ion-label>
+    <ion-input [(ngModel)]="num_kitchen"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">num_parking</ion-label>
+    <ion-input [(ngModel)]="num_parking"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">price</ion-label>
+    <ion-input [(ngModel)]="price"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">price_unit</ion-label>
+    <ion-input [(ngModel)]="price_unit"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">period</ion-label>
+    <ion-input [(ngModel)]="period"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">period_unit</ion-label>
+    <ion-input [(ngModel)]="period_unit"></ion-input>
+  </ion-item>
+
+  <!-- Create -->
+  <!-- <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="nameVal"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input [(ngModel)]="emailVal"></ion-input>
+  </ion-item>
+-->
+  <ion-button color="success" expand="block" (click)="createUser()">
+    Add House
+  </ion-button>
+
+  
+  <!-- Read -->
+  <ion-item *ngFor="let user of crud.USERS">
+    <ion-label>
+      <h2><strong>{{ user.title }}</strong></h2>
+      <p>{{ user.address }}</p>
+      <p>{{ user.house_id }}</p>
+    </ion-label>
+
+    <div class="item-note" item-end>
+      <ion-icon color="primary" name="create" style="zoom:1.3" [routerLink]="['/edit/', user.house_id]"></ion-icon>
+      
+      <ion-icon color="danger" name="trash" style="zoom:1.3" (click)="remove(user.house_id)"></ion-icon>
+    </div>
+  </ion-item>
+  
+</ion-content> 

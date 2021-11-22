@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">title</ion-label>
+    <ion-input [(ngModel)]="title"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">about</ion-label>
+    <ion-input [(ngModel)]="about"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">address</ion-label>
+    <ion-input [(ngModel)]="address"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">num_bed_room</ion-label>
+    <ion-input [(ngModel)]="num_bed_room"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">num_kitchen</ion-label>
+    <ion-input [(ngModel)]="num_kitchen"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">num_parking</ion-label>
+    <ion-input [(ngModel)]="num_parking"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">price</ion-label>
+    <ion-input [(ngModel)]="price"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">price_unit</ion-label>
+    <ion-input [(ngModel)]="price_unit"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">period</ion-label>
+    <ion-input [(ngModel)]="period"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">period_unit</ion-label>
+    <ion-input [(ngModel)]="period_unit"></ion-input>
+  </ion-item>
+
+  <ion-button color="dark" expand="block" (click)="onUpdate()">
+    Update
+  </ion-button>
+</ion-content>
